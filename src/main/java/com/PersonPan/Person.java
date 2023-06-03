@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Person {
@@ -13,7 +14,15 @@ public class Person {
 	private String name;
 	 private long phno;
 	 private String address;
+	 @OneToOne
+	 private Pancard pancard;
 	
+	public Pancard getPancard() {
+		return pancard;
+	}
+	public void setPancard(Pancard pancard) {
+		this.pancard = pancard;
+	}
 	public int getId() {
 		return id;
 	}
@@ -40,13 +49,15 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", phno=" + phno + ", address=" + address + "]";
+		return "Person [id=" + id + ", name=" + name + ", phno=" + phno + ", address=" + address + ", pancard="
+				+ pancard + "]";
 	}
 	
-
-	}
+	
+}
 
 	
 	
+
 
 
