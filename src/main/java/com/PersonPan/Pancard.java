@@ -12,6 +12,8 @@ public class Pancard {
 	int id;
 	String panno;
 	String Address;
+	long phno;
+	long contno;
 
 	public int getId() {
 		return id;
